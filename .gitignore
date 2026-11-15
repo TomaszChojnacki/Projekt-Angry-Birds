@@ -1,0 +1,40 @@
+
+# Pliki kompilacji Visual Studio
+**/Debug/
+**/Release/
+**/x64/
+**/x86/
+**/bin/
+**/obj/
+
+# Pliki tymczasowe Visual Studio
+.vs/
+*.user
+*.suo
+*.VC.db
+*.VC.opendb
+*.VC.db-shm
+*.VC.db-wal
+*.VC.db-journal
+*.VC.db-lock
+*.ipch
+*.VC.db-*
+*.VC.opendb-*
+
+# Pliki wynikowe kompilacji
+*.dll
+*.exe
+*.obj
+*.pdb
+*.ilk
+*.lib
+*.exp
+*.idb
+*.tlog
+*.lastbuildstate
+
+# Pliki generowane przez PhysX / Visual Studio
+*.vsidx
+*.VC.db
+*.log
+*.cache
