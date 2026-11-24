@@ -126,7 +126,47 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\Gra\ElementBudowli.cpp" />
+    <ClCompile Include="..\Gra\Gra.cpp" />
+    <ClCompile Include="..\Gra\Proca.cpp" />
+    <ClCompile Include="..\Gra\Ptak.cpp" />
+    <ClCompile Include="..\Gra\StanGry.cpp" />
+    <ClCompile Include="..\Gra\Swinia.cpp" />
+    <ClCompile Include="..\Gra\SystemObrazen.cpp" />
+    <ClCompile Include="..\Gra\SystemPunktacji.cpp" />
+    <ClCompile Include="..\Interfejs\EkranKoncowy.cpp" />
+    <ClCompile Include="..\Interfejs\HUD.cpp" />
+    <ClCompile Include="..\Interfejs\Menu.cpp" />
+    <ClCompile Include="..\Poziomy\MenedzerPoziomow.cpp" />
+    <ClCompile Include="..\Poziomy\Poziom.cpp" />
+    <ClCompile Include="..\Silnik\Kamera.cpp" />
+    <ClCompile Include="..\Silnik\ObslugaWejscia.cpp" />
+    <ClCompile Include="..\Silnik\Renderer.cpp" />
+    <ClCompile Include="..\Silnik\SilnikFizyki.cpp" />
+    <ClCompile Include="..\Silnik\ZdarzeniaKolizji.cpp" />
     <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Gra\ElementBudowli.h" />
+    <ClInclude Include="..\Gra\Gra.h" />
+    <ClInclude Include="..\Gra\Proca.h" />
+    <ClInclude Include="..\Gra\Ptak.h" />
+    <ClInclude Include="..\Gra\StanGry.h" />
+    <ClInclude Include="..\Gra\Swinia.h" />
+    <ClInclude Include="..\Gra\SystemObrazen.h" />
+    <ClInclude Include="..\Gra\SystemPunktacji.h" />
+    <ClInclude Include="..\Interfejs\EkranKoncowy.h" />
+    <ClInclude Include="..\Interfejs\HUD.h" />
+    <ClInclude Include="..\Interfejs\Menu.h" />
+    <ClInclude Include="..\Konfiguracja\Ustawienia.h" />
+    <ClInclude Include="..\Poziomy\DanePoziomow.h" />
+    <ClInclude Include="..\Poziomy\MenedzerPoziomow.h" />
+    <ClInclude Include="..\Poziomy\Poziom.h" />
+    <ClInclude Include="..\Silnik\Kamera.h" />
+    <ClInclude Include="..\Silnik\ObslugaWejscia.h" />
+    <ClInclude Include="..\Silnik\Renderer.h" />
+    <ClInclude Include="..\Silnik\SilnikFizyki.h" />
+    <ClInclude Include="..\Silnik\ZdarzeniaKolizji.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

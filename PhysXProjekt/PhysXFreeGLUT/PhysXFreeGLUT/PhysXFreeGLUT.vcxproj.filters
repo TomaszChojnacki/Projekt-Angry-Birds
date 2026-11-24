@@ -13,10 +13,153 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Pliki nagłówkowe\Gra">
+      <UniqueIdentifier>{59f6f4d4-4deb-4ef0-9c31-64f7c6e838c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Gra">
+      <UniqueIdentifier>{0b95b69c-1bf7-4f87-8657-458c08d3fe1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Interfejs">
+      <UniqueIdentifier>{ecd6601c-2367-4eeb-bc87-ef08fd586645}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Interfejs">
+      <UniqueIdentifier>{316f632c-850f-403e-bedd-9fc3540ef595}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Konfiguracja">
+      <UniqueIdentifier>{f3d752f9-46d7-4368-8790-ce6153bbbde5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Poziomy">
+      <UniqueIdentifier>{0387e784-1aca-4557-a4a4-a5f9dfc7d65c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Poziomy">
+      <UniqueIdentifier>{4e678bf2-6bd9-40a6-8124-41ba4563f533}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Silnik">
+      <UniqueIdentifier>{7905fc6a-bbca-4823-b692-6bce6fab05b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Silnik">
+      <UniqueIdentifier>{453d910a-2e5c-4e14-8b52-33cbac9cf238}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
+    <ClCompile Include="..\Gra\Proca.cpp">
+      <Filter>Pliki źródłowe\Gra</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Gra\Ptak.cpp">
+      <Filter>Pliki źródłowe\Gra</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Gra\StanGry.cpp">
+      <Filter>Pliki źródłowe\Gra</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Gra\Swinia.cpp">
+      <Filter>Pliki źródłowe\Gra</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Gra\SystemObrazen.cpp">
+      <Filter>Pliki źródłowe\Gra</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Gra\SystemPunktacji.cpp">
+      <Filter>Pliki źródłowe\Gra</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Gra\ElementBudowli.cpp">
+      <Filter>Pliki źródłowe\Gra</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Gra\Gra.cpp">
+      <Filter>Pliki źródłowe\Gra</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Interfejs\EkranKoncowy.cpp">
+      <Filter>Pliki źródłowe\Interfejs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Interfejs\HUD.cpp">
+      <Filter>Pliki źródłowe\Interfejs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Interfejs\Menu.cpp">
+      <Filter>Pliki źródłowe\Interfejs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Poziomy\MenedzerPoziomow.cpp">
+      <Filter>Pliki źródłowe\Poziomy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Poziomy\Poziom.cpp">
+      <Filter>Pliki źródłowe\Poziomy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Silnik\Kamera.cpp">
+      <Filter>Pliki źródłowe\Silnik</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Silnik\ObslugaWejscia.cpp">
+      <Filter>Pliki źródłowe\Silnik</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Silnik\Renderer.cpp">
+      <Filter>Pliki źródłowe\Silnik</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Silnik\SilnikFizyki.cpp">
+      <Filter>Pliki źródłowe\Silnik</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Silnik\ZdarzeniaKolizji.cpp">
+      <Filter>Pliki źródłowe\Silnik</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Gra\ElementBudowli.h">
+      <Filter>Pliki nagłówkowe\Gra</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gra\Gra.h">
+      <Filter>Pliki nagłówkowe\Gra</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gra\Proca.h">
+      <Filter>Pliki nagłówkowe\Gra</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gra\Ptak.h">
+      <Filter>Pliki nagłówkowe\Gra</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gra\StanGry.h">
+      <Filter>Pliki nagłówkowe\Gra</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gra\Swinia.h">
+      <Filter>Pliki nagłówkowe\Gra</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gra\SystemObrazen.h">
+      <Filter>Pliki nagłówkowe\Gra</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Gra\SystemPunktacji.h">
+      <Filter>Pliki nagłówkowe\Gra</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Interfejs\EkranKoncowy.h">
+      <Filter>Pliki nagłówkowe\Interfejs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Interfejs\HUD.h">
+      <Filter>Pliki nagłówkowe\Interfejs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Interfejs\Menu.h">
+      <Filter>Pliki nagłówkowe\Interfejs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Konfiguracja\Ustawienia.h">
+      <Filter>Pliki nagłówkowe\Konfiguracja</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Poziomy\DanePoziomow.h">
+      <Filter>Pliki nagłówkowe\Poziomy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Poziomy\MenedzerPoziomow.h">
+      <Filter>Pliki nagłówkowe\Poziomy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Poziomy\Poziom.h">
+      <Filter>Pliki nagłówkowe\Poziomy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Silnik\ZdarzeniaKolizji.h">
+      <Filter>Pliki nagłówkowe\Silnik</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Silnik\Kamera.h">
+      <Filter>Pliki nagłówkowe\Silnik</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Silnik\ObslugaWejscia.h">
+      <Filter>Pliki nagłówkowe\Silnik</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Silnik\Renderer.h">
+      <Filter>Pliki nagłówkowe\Silnik</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Silnik\SilnikFizyki.h">
+      <Filter>Pliki nagłówkowe\Silnik</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
