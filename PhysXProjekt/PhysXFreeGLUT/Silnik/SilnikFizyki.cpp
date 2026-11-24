@@ -4,6 +4,7 @@
 #include <algorithm>
 #include <iostream>
 
+
 using namespace physx;
 
 namespace
@@ -955,4 +956,39 @@ void SilnikFizyki::wyczysc()
 
     gpuAktywne = false;
     wyeliminowaneSwinie = 0;
+}
+
+
+
+
+
+
+bool SilnikFizyki::usunPtaka(PxRigidDynamic* ptak)
+{
+    if (!ptak)
+        return false;
+
+    for (auto it = obiekty.begin();
+        it != obiekty.end();
+        ++it)
+    {
+        // Usuwamy wylacznie wskazanego ptaka.
+        if (it->aktor != ptak ||
+            it->typ != TypObiektu::Ptak)
+        {
+            continue;
+        }
+
+        // Zwolnienie obiektu fizycznego.
+        ptak->release();
+
+        // Usuniecie z listy renderowanych obiektow.
+        obiekty.erase(it);
+
+        std::cout << "Usunieto poprzedniego ptaka.\n";
+
+        return true;
+    }
+
+    return false;
 }

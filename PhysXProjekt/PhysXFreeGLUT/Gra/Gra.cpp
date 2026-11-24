@@ -164,6 +164,38 @@ void Gra::aktualizuj()
         sprawdzKoniecPoziomu();
     }
 
+
+
+
+    //-------------usuwanie ptaka--------------------------------------------------
+
+
+    // Po zakonczeniu poziomu ostatni aktywny ptak
+    // rowniez powinien zostac usuniety.
+    if (stanGry != StanRozgrywki::Rozgrywka &&
+        ostatniPtak != nullptr)
+    {
+        PtakDoUsuniecia staryPtak;
+
+        staryPtak.aktor = ostatniPtak;
+        staryPtak.pozostalyCzas =
+            CZAS_ZNIKANIA_PTAKA;
+
+        ptakiDoUsuniecia.push_back(staryPtak);
+
+        ostatniPtak = nullptr;
+    }
+
+    // Odliczamy czas tylko gdy gra nie jest w pauzie.
+    // Dziala rowniez po wygranej lub przegranej.
+    if (!pauza)
+    {
+        aktualizujUsuwaniePtakow();
+    }
+    //------------------------------------------------------------
+
+
+
     glutPostRedisplay();
 }
 
@@ -340,13 +372,33 @@ void Gra::wystrzel()
         << "\n";
 }
 
+
 void Gra::przygotujKolejnegoPtaka()
 {
-    // Poprzedni ptak pozostaje w scenie,
-    // ale nie jest juz aktywnym strzalem.
+    // Poprzedni ptak zakonczyl swoj strzal.
+    if (ostatniPtak)
+    {
+        PtakDoUsuniecia staryPtak;
+
+        staryPtak.aktor = ostatniPtak;
+        staryPtak.pozostalyCzas =
+            CZAS_ZNIKANIA_PTAKA;
+
+        // Zapamietujemy ptaka do pozniejszego usuniecia.
+        ptakiDoUsuniecia.push_back(staryPtak);
+
+        std::cout
+            << "Poprzedni ptak zniknie za "
+            << CZAS_ZNIKANIA_PTAKA
+            << " sekundy.\n";
+    }
+
+    // Poprzedni ptak nie jest juz aktywnym strzalem.
     ostatniPtak = nullptr;
 
+    // Przygotowanie nastepnego ptaka na procy.
     pozycjaPtaka = POZYCJA_PROCY;
+
     czasOdWystrzalu = 0.0f;
     naciaganie = false;
 
@@ -355,6 +407,7 @@ void Gra::przygotujKolejnegoPtaka()
         std::cout << "Kolejny ptak gotowy.\n";
     }
 }
+
 
 void Gra::resetujGre()
 {
@@ -414,6 +467,33 @@ void Gra::obsluzKlawisz(
         break;
     }
 }
+
+
+
+void Gra::aktualizujUsuwaniePtakow()
+{
+    for (auto it = ptakiDoUsuniecia.begin();
+        it != ptakiDoUsuniecia.end();)
+    {
+        // Zmniejszamy pozostaly czas zycia ptaka.
+        it->pozostalyCzas -= KROK_FIZYKI;
+
+        if (it->pozostalyCzas <= 0.0f)
+        {
+            // Usuwamy obiekt z silnika PhysX.
+            silnikFizyki.usunPtaka(it->aktor);
+
+            // Usuwamy wpis z listy.
+            it = ptakiDoUsuniecia.erase(it);
+        }
+        else
+        {
+            ++it;
+        }
+    }
+}
+
+
 
 void Gra::zakoncz()
 {

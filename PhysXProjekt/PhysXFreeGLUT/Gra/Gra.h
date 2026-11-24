@@ -5,6 +5,7 @@
 #include "../Silnik/Renderer.h"
 
 #include "SystemPunktacji.h"
+#include <vector>
 
 // Aktualny stan poziomu.
 enum class StanRozgrywki
@@ -89,4 +90,24 @@ private:
     void sprawdzKoniecPoziomu();
 
     const char* pobierzNapisStanu() const;
+
+
+    // usuwanie ptaka------------------------------ 
+    // Ptak, ktory zakonczyl swoj strzal
+    // i czeka na usuniecie ze sceny.
+    struct PtakDoUsuniecia
+    {
+        physx::PxRigidDynamic* aktor = nullptr;
+        float pozostalyCzas = 3.0f;
+    };
+
+    // Lista ptakow oczekujacych na znikniecie.
+    std::vector<PtakDoUsuniecia> ptakiDoUsuniecia;
+
+    // Czas zycia starego ptaka po zakonczeniu strzalu.
+    static constexpr float CZAS_ZNIKANIA_PTAKA = 3.0f;
+
+    // Odliczanie czasu i usuwanie starych ptakow.
+    void aktualizujUsuwaniePtakow();
+
 };

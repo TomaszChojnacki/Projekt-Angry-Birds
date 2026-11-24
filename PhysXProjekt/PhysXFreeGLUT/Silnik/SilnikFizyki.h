@@ -78,6 +78,8 @@ public:
         const physx::PxVec3& pozycja,
         const physx::PxVec3& predkosc
     );
+    // Usuwa wystrzelonego ptaka z fizyki i renderowania.
+    bool usunPtaka(physx::PxRigidDynamic* ptak);
 
     // Informacje potrzebne w kolejnych etapach.
     int pobierzLiczbeSwin() const;
